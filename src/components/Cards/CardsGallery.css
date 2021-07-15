@@ -1,5 +1,38 @@
-galleryStyles {
+.galleryStyles {
   font-family: FiraMono;
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  min-height: 300px;
+  /* grid-template-areas:
+    "one two three"
+    "four five six"
+    "sevent eight nine"; */
+}
+
+.single-card-wrapper {
   display: flex;
-  min-height: 350px;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.card-button {
+  background: unset;
+}
+
+.card-button:hover {
+  background: rgba(255,255,255,0.7);
+  color: var(--darktext);
+}
+
+.arrow {
+  font-size: 24px;
+}
+
+.previous-arrow {
+  transform: rotateZ(140deg);
+}
+
+.next-arrow {
+  transform: rotateZ(315deg);
 }

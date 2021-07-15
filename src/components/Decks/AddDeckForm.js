@@ -22,9 +22,10 @@ function AddDeckForm() {
     <div>
       <h3>Create A New Deck</h3>
       <form onSubmit={e => createNewDeck(e)} style={{ display: 'flex', flexDirection: 'column' }} >
-        <div className='formInput' >
+        <div className='form' >
           <label htmlFor='name'>Name</label>
           <input
+            className='input'
             type='text'
             required='required'
             name='name'
@@ -32,9 +33,10 @@ function AddDeckForm() {
             value={name}
             onChange={e => setName(e.target.value)} />
         </div>
-        <div className='formInput' >
+        <div className='form' >
           <label htmlFor='category'>Category</label>
           <input
+            className='input'
             type='text'
             required='required'
             name='category'

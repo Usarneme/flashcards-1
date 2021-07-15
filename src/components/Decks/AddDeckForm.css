@@ -2,6 +2,18 @@
   display: flex;
   justify-content: space-around;
   padding-bottom: 11px;
-  float: right;
-  max-width: 100%;
 }
+
+.input {
+  float: right;
+  max-width: 70%;
+}
+
+@media all and (min-width: 768px) {
+  .input {
+    float: right;
+  max-width: 75%;
+  }
+}
+
+

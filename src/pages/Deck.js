@@ -33,7 +33,7 @@ function Deck() {
     return (
       <div className='container'>
         <Header title='Deck' />
-        <SingleDeck {...deck} />
+        <SingleDeck {...deck} deckPage={true} />
 
         <div style={{ display: 'flex' }} >
           <div style={{ padding: '22px', marginTop: '40px' }}>

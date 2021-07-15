@@ -17,13 +17,13 @@ function Navbar() {
         </IconContext.Provider>
         <span>Home</span>
       </Link>
-      <Link className={`buttonStyles link-wrapper ${ pathname === '/categories' ? 'link-selected' : null }`} to='/categories'>
+      <Link className={`buttonStyles link-wrapper ${ pathname.startsWith('/categor') ? 'link-selected' : null }`} to='/categories'>
         <IconContext.Provider value={{ className: "icons", color: "black" }}>
           <IoOptionsSharp className='navbar-icon' />
         </IconContext.Provider>
         <span>Categories</span>
       </Link>
-      <Link className={`buttonStyles link-wrapper ${ pathname === '/decks' ? 'link-selected' : null }`} to='/decks'>
+      <Link className={`buttonStyles link-wrapper ${ pathname.startsWith('/deck') ? 'link-selected' : null }`} to='/decks'>
         <IconContext.Provider value={{ className: "icons", color: "black" }}>
           <CgCardSpades className='navbar-icon' />
         </IconContext.Provider>

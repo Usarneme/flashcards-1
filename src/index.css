@@ -80,8 +80,13 @@ a {
   line-height: 52px;
 }
 
+p {
+  line-height: 1;
+}
+
 h1,h2,h3,h4,h5 {
   font-weight: bold;
+  line-height: 1;
 }
 h1 {
   font-size: 2.7rem;
@@ -121,7 +126,6 @@ h4 {
   transform: scale(1.02);
   color: var(--darktext);
 }
-
 
 .buttonStyles:hover,
 .buttonStyles:hover > *,

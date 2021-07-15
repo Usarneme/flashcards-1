@@ -1,6 +1,16 @@
 .deckStyles {
   display: flex;
   flex-direction: column;
-  padding: 8px;
+  padding: 15px 10px;
   justify-content: center;
+}
+
+.single-deck-wrapper {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.nameStyles + p {
+  margin-bottom: 18px;
+  margin-top: 3px;
 }
