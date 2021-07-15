@@ -8,6 +8,7 @@ import AddCardForm from './../components/Cards/AddCardForm'
 import CardsList from './../components/Cards/CardsList'
 import EditDeckForm from './../components/Decks/EditDeckForm'
 import SingleDeck from './../components/Decks/SingleDeck'
+import './Deck.css'
 
 function Deck() {
   const { id } = useParams()
@@ -35,30 +36,33 @@ function Deck() {
         <Header title='Deck' />
         <SingleDeck {...deck} deckPage={true} />
 
-        <div style={{ display: 'flex' }} >
-          <div style={{ padding: '22px', marginTop: '40px' }}>
+        <div className='deck-buttons-wrapper'>
+          <div className='deck-button-wrapper'>
             <button className='buttonStyles' onClick={() => setEditDeckFormShowing(!editDeckFormShowing)}>
               { editDeckFormShowing ? `Cancel Deck Edits` : `Edit Deck` }
             </button>
           </div>
 
-          <div style={{ padding: '22px', marginTop: '40px' }}>
+          <div className='deck-button-wrapper'>
             <button className='buttonStyles' onClick={handleDeletingDeck} >
               Delete Deck
             </button>
           </div>
 
-          <div style={{ padding: '22px', marginTop: '40px' }}>
+          <div className='deck-button-wrapper'>
             <button className='buttonStyles' onClick={() => setAddCardFormShowing(!addCardFormShowing)}>
               { addCardFormShowing ? `Cancel Adding Card` : `Add Card` }
             </button>
           </div>
 
-          <div style={{ padding: '22px', marginTop: '40px' }}>
-            <button className='buttonStyles' onClick={() => setCardsListShowing(!cardsListShowing)} >
-              { cardsListShowing ? 'Cancel Card Edits' : 'Edit Cards' }
-            </button>
-          </div>
+          { deck.cards.length > 0 ?
+            <div className='deck-button-wrapper'>
+              <button className='buttonStyles' onClick={() => setCardsListShowing(!cardsListShowing)} >
+                { cardsListShowing ? 'Cancel Card Edits' : 'Edit Cards' }
+              </button>
+            </div>
+            : null
+          }
 
         </div>
 

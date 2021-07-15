@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-around;
   padding-bottom: 11px;
+  align-items: baseline;
 }
 
 .input {

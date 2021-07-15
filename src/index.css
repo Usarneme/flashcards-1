@@ -60,6 +60,7 @@ table {
   --bg: rgb(39, 61, 80);
   --txt: rgb(230, 240, 240);
   --darktext: rgb(11,11,11);
+  --light-bg: rgba(255,255,255,0.7);
 }
 
 * {
@@ -118,10 +119,11 @@ h4 {
   cursor: pointer;
   transition: 0.20s;
   transition-timing-function: ease-in-out;
+  background: unset;
 }
 
 .buttonStyles:hover {
-  background: rgba(255,255,255,0.7);
+  background: var(--light-bg);
   border-radius: 10px;
   transform: scale(1.02);
   color: var(--darktext);
@@ -136,14 +138,17 @@ h4 {
   border-radius: 10px;
 }
 
+label, input {
+  min-height: 32px;
+}
+
 label {
   flex-grow: 1;
-  min-height: 32px
 }
 
 input {
   flex-grow: 4;
-  min-height: 32px
+  color: var(--darktext);
 }
 
 .mt1 {
