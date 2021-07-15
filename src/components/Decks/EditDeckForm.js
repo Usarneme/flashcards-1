@@ -24,6 +24,7 @@ function EditDeckForm(props) {
         <div className='formContainer' >
           <label htmlFor='name'>Name</label>
           <input
+            className='input'
             type='text'
             required='required'
             name='name'
@@ -34,6 +35,7 @@ function EditDeckForm(props) {
         <div style={{ display: 'flex', justifyContent: 'space-around'}} >
           <label htmlFor='category'>Category</label>
           <input
+            className='input'
             type='text'
             required='required'
             name='category'

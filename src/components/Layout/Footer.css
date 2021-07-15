@@ -1,7 +1,13 @@
 .footerStyles {
   background-color: rgb(76, 195, 255);
-  margin-top: 120px;
+  margin-top: 20px;
   padding: 10px;
   display: flex;
   align-items: center;
+}
+
+@media all and (min-height: 767px) {
+  .footerStyles {
+    margin-top: 44px;
+  }
 }

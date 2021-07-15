@@ -7,15 +7,13 @@ function SingleDeck(props) {
   const { id } = useParams()
 
   return (
-    <Link to={`/deck/${props.id}`}>
-      <div className='flex f-col deckStyles' >
-        <h3 className='nameStyles'>{props.name}</h3>
-        <p className='faded'>{props.category}</p>
-        { id ?
-          <div style={{ padding: '20px' }}>{props.cards.length ? <CardsGallery cards={props.cards} /> : 'No cards yet'}</div>
-          : null
-        }
-      </div>
+    <Link className='buttonStyles deckStyles'to={`/deck/${props.id}`}>
+      <h3 className='nameStyles'>{props.name}</h3>
+      <p className='faded'>{props.category}</p>
+      { id ?
+        <div style={{ padding: '20px' }}>{props.cards.length ? <CardsGallery cards={props.cards} /> : 'No cards yet'}</div>
+        : null
+      }
     </Link>
   )
 }

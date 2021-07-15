@@ -1,3 +1,4 @@
+import { IconContext } from 'react-icons'
 import { useLocation } from 'react-router-dom'
 import { CgCardSpades } from 'react-icons/cg'
 import { IoOptionsSharp } from 'react-icons/io5'
@@ -10,22 +11,22 @@ function Navbar() {
   console.log(pathname)
   return (
     <div className='navbar-wrapper'>
-      <Link className={`link-wrapper ${ pathname === '/' ? 'link-selected' : null }`} to='/'>
-        <div className='icon-wrapper'>
+      <Link className={`buttonStyles link-wrapper ${ pathname === '/' ? 'link-selected' : null }`} to='/'>
+        <IconContext.Provider value={{ className: "icons", color: "black" }}>
           <BiHomeHeart className='navbar-icon' />
-        </div>
+        </IconContext.Provider>
         <span>Home</span>
       </Link>
-      <Link className={`link-wrapper ${ pathname === '/categories' ? 'link-selected' : null }`} to='/categories'>
-        <div className='icon-wrapper'>
+      <Link className={`buttonStyles link-wrapper ${ pathname === '/categories' ? 'link-selected' : null }`} to='/categories'>
+        <IconContext.Provider value={{ className: "icons", color: "black" }}>
           <IoOptionsSharp className='navbar-icon' />
-        </div>
+        </IconContext.Provider>
         <span>Categories</span>
       </Link>
-      <Link className={`link-wrapper ${ pathname === '/decks' ? 'link-selected' : null }`} to='/decks'>
-        <div className='icon-wrapper'>
+      <Link className={`buttonStyles link-wrapper ${ pathname === '/decks' ? 'link-selected' : null }`} to='/decks'>
+        <IconContext.Provider value={{ className: "icons", color: "black" }}>
           <CgCardSpades className='navbar-icon' />
-        </div>
+        </IconContext.Provider>
         <span>Decks</span>
       </Link>
     </div>

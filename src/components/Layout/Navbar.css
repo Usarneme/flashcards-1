@@ -1,6 +1,7 @@
 .navbar-wrapper {
   display: flex;
   justify-content: space-around;
+  border-bottom: 1px solid #333;
 }
 
 .link-wrapper {
@@ -8,24 +9,28 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255,255,255,0.25);
   line-height: 20px;
   font-size: 18px;
   flex: 1;
   cursor: pointer;
   margin: 0 1px;
+  border: none!important;
+
 }
 
 .navbar-icon {
   font-size: 20px;
 }
 
-.link-wrapper:hover {
-  background: rgba(255,255,255,0.45);
+.link-selected {
+  background: rgba(255,255,255,0.75);
 }
 
-.link-selected {
-  background: rgba(255,255,255,0.55);
+.link-selected,
+.link-selected > svg.icons,
+.link-selected > *,
+.link-selected > svg.icons > path {
+  color: var(--darktext);
 }
 
 @media all and (min-width: 768px) {

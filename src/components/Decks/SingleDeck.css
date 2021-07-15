@@ -1,14 +1,6 @@
 .deckStyles {
   display: flex;
   flex-direction: column;
-  padding: 11px;
+  padding: 8px;
   justify-content: center;
-}
-
-.deckStyles:hover {
-  background: rgba(255,255,255,.65);
-}
-
-.faded {
-  color: rgba(0,0,0,0.65);
 }

@@ -22,7 +22,7 @@ function Category() {
     return(
       <div className='container'>
         <Header title={`Category - ${category[0].toUpperCase()}${category.substring(1)}`} />
-        <div style={{ margin: '44px 0 22px 0' }} >
+        <div className='list-wrapper' >
           { decks.map(deck => <Link className='buttonStyles' to={`/deck/${deck.id}`}>{deck.name}</Link> )}
         </div>
       </div>

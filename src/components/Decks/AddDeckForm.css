@@ -1,5 +1,7 @@
-.formInput {
+.form {
   display: flex;
   justify-content: space-around;
   padding-bottom: 11px;
+  float: right;
+  max-width: 100%;
 }
